@@ -177,20 +177,24 @@ section {
 	transition: all 0.2s ease-in-out;
 }
 .navbar-default .navbar-brand {
-	background-image: url(../img/logo.png);
-	background-size: auto;
+	background-image: url(../img/logo_web.jpeg);
+	background-size: contain;
+	
 }
 .navbar-shrink .navbar-brand {
-	background-image: url(../img/logo.png);
-	background-size: auto;
+	background-image: url(../img/logo_web.jpeg);
+	background-size: contain;
+	
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo.png);
-	background-size: auto;
+	background-image: url(../img/logo_web.jpeg);
+	background-size: contain;
+	
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo.png);
-	background-size: auto;
+	background-image: url(../img/logo_web.jpeg);
+	background-size: contain;
+	
 }
 
 /* Navbar links */
@@ -1181,7 +1185,7 @@ p.subtitle {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
 	width: 100%;
-	
+	height: fit-content;
   }
 .product-card:hover {
 	padding-left: 5px;
@@ -1190,7 +1194,18 @@ p.subtitle {
   
 .product-container {
 	padding: 20px 16px;
+
 }
+.product-container3 {
+	padding: 10px 5px;
+
+}
+.product-container2 {
+	padding: 20px 16px;
+	height: 400px;
+}
+
+
 
 .product-card{
 	margin: 0 auto; /* Added */
@@ -1199,6 +1214,3 @@ p.subtitle {
 }
 
 /* ===== industry ===== */
-.img-pos{
-	
-}
