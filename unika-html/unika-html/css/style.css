@@ -80,7 +80,8 @@ h5 {
 	font-size: 18px;
 }
 p {
-	font: 14px/1.5em "Roboto";
+	font: 16px/1.5em "Roboto";
+	
 }
 .navbar-nav > li > a {
 	font-family: "Lato", Helvetica, Arial, sans-serif;
@@ -1202,7 +1203,8 @@ p.subtitle {
 }
 .product-container2 {
 	padding: 20px 16px;
-	height: 400px;
+	height: 450px;
+	width: auto;
 }
 
 

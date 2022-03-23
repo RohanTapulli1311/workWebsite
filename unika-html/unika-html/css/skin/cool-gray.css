@@ -138,10 +138,12 @@ a, a:hover, a:focus {
 
 
 /* === CTA Section, Social & Partners === */
-#cta-section, #partners-section, #social-section {
+/* #cta-section, #partners-section, #social-section {
+	background: #f8f8f8 url('../../img/pat-bg.png') repeat;
+} */
+#welcome-section, #portfolio-section, #socials-section{
 	background: #f8f8f8 url('../../img/pat-bg.png') repeat;
 }
-
 
 /* === Portfolio === */
 .active_prot_menu a, .portfolio_menu ul li a:hover{
