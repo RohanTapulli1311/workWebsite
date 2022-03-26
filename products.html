@@ -1,55 +1,136 @@
 <!doctype html>
 <html lang="en-US">
-	<head>
-        <meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Unika - Responsive One Page HTML5 Template</title>
-		<meta name="description" content="Unika - Responsive One Page HTML5 Template">
-		<meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
-		<meta name="author" content="imransdesign.com">
 
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- Google Fonts  -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Unika - Responsive One Page HTML5 Template</title>
+    <meta name="description" content="Unika - Responsive One Page HTML5 Template">
+    <meta name="keywords" content="HTML5, Bootsrtrap, One Page, Responsive, Template, Portfolio" />
+    <meta name="author" content="imransdesign.com">
 
-		<!-- Libs and Plugins CSS -->
-		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="inc/animations/css/animate.min.css">
-		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons -->
-		<link rel="stylesheet" href="inc/owl-carousel/css/owl.carousel.css">
-		<link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Theme CSS -->
-        <link rel="stylesheet" href="css/products.css">
-        <link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/mobile.css">
+    <!-- Google Fonts  -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+    <!-- Body font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <!-- Navbar font -->
 
-		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skin/cool-gray.css">
-        
-    </head>
-    <body data-spy="scroll" data-target="#main-navbar">
-        <!--========== BEGIN HEADER ==========-->
-        <header id="header" class="header-main">
+    <!-- Libs and Plugins CSS -->
+    <link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="inc/animations/css/animate.min.css">
+    <link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons -->
+    <link rel="stylesheet" href="inc/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
 
-            <!-- Begin Navbar -->
-            <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation"> <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
 
-              <div class="container">
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="css/skin/cool-gray.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .Slide {
+
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+            width: 100%;
+            height: 400px;
+        }
+
+        .slideContainer {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .prevBtn,
+        .nextBtn {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            background-color: rgb(255, 255, 75);
+            color: rgb(50, 0, 116);
+            font-weight: bolder;
+            font-size: 18px;
+        }
+
+        .nextBtn {
+            right: 0;
+        }
+
+        .Caption {
+            color: #fbff09;
+            font-weight: bold;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .Navdot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: rgb(54, 5, 117);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .selected,
+        .Navdot:hover {
+            background-color: #d9ff00;
+        }
+
+        @media only screen and (max-width: 450px) {
+
+            .prevBtn,
+            .nextBtn,
+            .Caption {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#main-navbar">
+    <!--========== BEGIN HEADER ==========-->
+    <header id="header" class="header-main">
+
+        <!-- Begin Navbar -->
+        <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
+
+            <div class="container">
 
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand page-scroll" href="index.html">Unika</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="index.html">Unika</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,19 +138,19 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="page-scroll" href="index.html">Home</a></li>
                         <li><a class="page-scroll" href="about.html">About Us</a></li>
-                        <li><a class="page-scroll" href="#">Facilities</a></li>
+                        <li><a class="page-scroll" href="facilities.html">Facilities</a></li>
                         <li><a class="page-scroll" href="products.html">Products</a></li>
-                        <li><a class="page-scroll" href="industry.html">Industry</a></li>                            
+                        <li><a class="page-scroll" href="industry.html">Industry</a></li>
                         <li><a class="page-scroll" href="contact.html">Contact Us</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
-              </div><!-- /.container -->
-            </nav>
-            <!-- End Navbar -->
+            </div><!-- /.container -->
+        </nav>
+        <!-- End Navbar -->
 
-        </header>
-        <!-- ========= END HEADER =========-->
-        <section id="welcome-section" class="page bg-style1" style="padding-top: 100px;">
+    </header>
+    <!-- ========= END HEADER =========-->
+    <section id="welcome-section" class="page bg-style1" style="padding-top: 100px;">
         <div class="page-header-wrapper">
             <div class="container">
                 <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
@@ -77,145 +158,221 @@
                     <div class="devider"></div>
                 </div>
                 <!-- Container for the image gallery -->
+                <div class="slideContainer">
+                    <div class="Slide">
+                        <img src="img/slideshow/1.jpeg" />
+                        <div class="Caption">Photo 1</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/2.jpeg" />
+                        <div class="Caption">Photo 2</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/3.jpeg" />
+                        <div class="Caption">Photo 3</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/4.jpeg" />
+                        <div class="Caption">Photo 4</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/5.jpeg" />
+                        <div class="Caption">Photo 5</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/6.jpeg" />
+                        <div class="Caption">Photo 6</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/7.jpeg" />
+                        <div class="Caption">Photo 7</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/10.jpeg" />
+                        <div class="Caption">Photo 8</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/8.jpeg" />
+                        <div class="Caption">Photo 9</div>
+                    </div>
+                    <div class="Slide">
+                        <img src="img/slideshow/9.jpeg" />
+                        <div class="Caption">Photo 10</div>
+                    </div>
 
-        <img src="img\product-bg.jpg" class="product-img" width="1500" height="200">
-        <br>
-        <br>
-        <div class="product-card">
-            <div class="product-container">
-                <h3><b>Teak Wood Patterns</b></h3>
-                <p>Teak wood patterns are usually used for short run production purpose. These patterns are always low in cost comparing Aluminium patterns</p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="product-card">
-          <div class="product-container">
-              <h3><b>Aluminium Patterns</b></h3>
-              <p>Aluminium Patterns are the good choice for high quality, long lasting production. Aluminium patterns are highly resistant to the abrasive sand. We manufacture cost-effective and durable Aluminium patterns in various shapes and sizes.</p>
-          </div>
-      </div>
-      <br>
-        <br>
-        <div class="product-card">
-            <div class="product-container">
-                <h3><b>Cast Iron Patterns</b></h3>
-                <p>As per Customer’s specifications, we are capable of producing cast iron pattern and core equipments.</p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="product-card">
-            <div class="product-container">
-                <h3><b>Shell Mould Patterns</b></h3>
-                <p>Shell molding, also known as shell-mold casting is an expendable mold casting process that uses a resin covered sand to form the mold. As compared to sand casting, this process has better dimensional accuracy, a higher productivity rate, and lower labor requirements. It is used for small to medium parts that require high precision. Examples of shell molded items include gear housings, cylinder heads and connecting rods. It is also used to make high-precision molding cores.</p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="product-card">
-            <div class="product-container">
-                <h3><b>Moulds</b></h3>
-                <p>We offer moulds, dies and patterns for lastic Injection Moulding, Rubber and Bakelite and Ceramic Moulding</p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="product-card">
-            <div class="product-container">
-                <h3><b>Machininig Solutions</b></h3>
-                <p>We are offering High quality ans precision machining solutions by CNC and VMC machining.</p>
-            </div>
-        </div>
-    </div>
-    </section>
-        <footer class="text-off-white">
-            
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row wow bounceInLeft" data-wow-delay="0.4s">
-
-                        <div class="col-sm-6 col-md-4">
-                            <h4>Useful Links</h4>
-                            <ul class="imp-links">
-                                <li><a href="">About</a></li>
-                                <li><a href="">Services</a></li>
-                                <li><a href="">Press</a></li>
-                                <li><a href="">Copyright</a></li>
-                                <li><a href="">Advertise</a></li>
-                                <li><a href="">Legal</a></li>
-                            </ul>
-                        </div>
+                    <a class="prevBtn">❮</a>
+                    <a class="nextBtn">❯</a>
+                </div>
+                <br />
+                <div style="text-align:center">
+                    <span class="Navdot" onclick="currentSlide(1)"></span>
+                    <span class="Navdot" onclick="currentSlide(2)"></span>
+                    <span class="Navdot" onclick="currentSlide(3)"></span>
+                    <span class="Navdot" onclick="currentSlide(4)"></span>
+                    <span class="Navdot" onclick="currentSlide(5)"></span>
+                    <span class="Navdot" onclick="currentSlide(6)"></span>
+                    <span class="Navdot" onclick="currentSlide(7)"></span>
+                    <span class="Navdot" onclick="currentSlide(8)"></span>
+                    <span class="Navdot" onclick="currentSlide(9)"></span>
+                    <span class="Navdot" onclick="currentSlide(10)"></span>
                     
-                        <div class="col-sm-6 col-md-4">
-                            <h4>Subscribe</h4>
-                            <div id="footer_signup">
-                                <div id="email">
-                                    <form id="subscribe" method="POST">
-                                        <input type="text" placeholder="Enter email address" name="email" id="address" data-validate="validate(required, email)"/>
-                                        <button type="submit">Submit</button>
-                                        <span id="result" class="section-description"></span>
-                                    </form> 
-                                </div>
-                            </div> 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
-                        </div>
+                </div>
 
-                        <div class="col-sm-12 col-md-4">
-                            <h4>Recent Tweets</h4>
-                            <div class="single-tweet">
-                                <div class="tweet-content"><span>@Unika</span> Excepteur sint occaecat cupidatat non proident</div>
-                                <div class="tweet-date">1 Hour ago</div>
-                            </div>
-                            <div class="single-tweet">
-                                <div class="tweet-content"><span>@Unika</span> Excepteur sint occaecat cupidatat non proident uku shumaru</div>
-                                <div class="tweet-date">1 Hour ago</div>
-                            </div>
-                        </div>
-                        
-                    </div> <!-- /.row -->
-                </div> <!-- /.container -->
-            </div>
-        </div>
-            
-            <div class="footer">
-                <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
-                    <p class="copyright">Copyright &copy; 2015 - Designed By <a href="https://www.behance.net/poljakova" class="theme-author">Veronika Poljakova</a> &amp; Developed by <a href="http://www.imransdesign.com/" class="theme-author">Imransdesign</a></p>
+                <!--<img src="img\product-bg.jpg" class="product-img" width="1500" height="200">-->
+                <br>
+                <div class="product-card">
+                    <div class="product-container">
+                        <h3><b>Teak Wood Patterns</b></h3>
+                        <p>Teak wood patterns are usually used for short run production purpose. These patterns are
+                            always low in cost comparing Aluminium patterns</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="product-card">
+                    <div class="product-container">
+                        <h3><b>Aluminium Patterns</b></h3>
+                        <p>Aluminium Patterns are the good choice for high quality, long lasting production. Aluminium
+                            patterns are highly resistant to the abrasive sand. We manufacture cost-effective and
+                            durable Aluminium patterns in various shapes and sizes.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="product-card">
+                    <div class="product-container">
+                        <h3><b>Cast Iron Patterns</b></h3>
+                        <p>As per Customer’s specifications, we are capable of producing cast iron pattern and core
+                            equipments.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="product-card">
+                    <div class="product-container">
+                        <h3><b>Shell Mould Patterns</b></h3>
+                        <p>Shell molding, also known as shell-mold casting is an expendable mold casting process that
+                            uses a resin covered sand to form the mold. As compared to sand casting, this process has
+                            better dimensional accuracy, a higher productivity rate, and lower labor requirements. It is
+                            used for small to medium parts that require high precision. Examples of shell molded items
+                            include gear housings, cylinder heads and connecting rods. It is also used to make
+                            high-precision molding cores.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="product-card">
+                    <div class="product-container">
+                        <h3><b>Moulds</b></h3>
+                        <p>We offer moulds, dies and patterns for lastic Injection Moulding, Rubber and Bakelite and
+                            Ceramic Moulding</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="product-card">
+                    <div class="product-container">
+                        <h3><b>Machininig Solutions</b></h3>
+                        <p>We are offering High quality ans precision machining solutions by CNC and VMC machining.</p>
+                    </div>
                 </div>
             </div>
+    </section>
+    <footer class="text-off-white">
 
-        </footer>
-        <script type="text/javascript">
-            let slideIndex = 1;
-showSlides(slideIndex);
+        <div class="footer-top">
+            <div class="container">
+                <div class="row wow bounceInLeft" data-wow-delay="0.4s">
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+                    <div class="col-sm-6 col-md-4">
+                        <h4>Useful Links</h4>
+                        <ul class="imp-links">
+                            <li><a href="">About</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Press</a></li>
+                            <li><a href="">Copyright</a></li>
+                            <li><a href="">Advertise</a></li>
+                            <li><a href="">Legal</a></li>
+                        </ul>
+                    </div>
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+                    <div class="col-sm-6 col-md-4">
+                        <h4>Subscribe</h4>
+                        <div id="footer_signup">
+                            <div id="email">
+                                <form id="subscribe" method="POST">
+                                    <input type="text" placeholder="Enter email address" name="email" id="address"
+                                        data-validate="validate(required, email)" />
+                                    <button type="submit">Submit</button>
+                                    <span id="result" class="section-description"></span>
+                                </form>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-        </script>
-    </body>
+                    <div class="col-sm-12 col-md-4">
+                        <h4>Recent Tweets</h4>
+                        <div class="single-tweet">
+                            <div class="tweet-content"><span>@Unika</span> Excepteur sint occaecat cupidatat non
+                                proident</div>
+                            <div class="tweet-date">1 Hour ago</div>
+                        </div>
+                        <div class="single-tweet">
+                            <div class="tweet-content"><span>@Unika</span> Excepteur sint occaecat cupidatat non
+                                proident uku shumaru</div>
+                            <div class="tweet-date">1 Hour ago</div>
+                        </div>
+                    </div>
+
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div>
+        </div>
+
+        <div class="footer">
+            <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                <p class="copyright">Copyright &copy; 2015 - Designed By <a href="https://www.behance.net/poljakova"
+                        class="theme-author">Veronika Poljakova</a> &amp; Developed by <a
+                        href="http://www.imransdesign.com/" class="theme-author">Imransdesign</a></p>
+            </div>
+        </div>
+
+    </footer>
+    <script type="text/javascript">
+        document.querySelector(".prevBtn").addEventListener("click", () => {
+            changeSlides(-1);
+        });
+        document.querySelector(".nextBtn").addEventListener("click", () => {
+            changeSlides(1);
+        });
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function changeSlides(n) {
+            showSlides((slideIndex += n));
+        }
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("Slide");
+            var dots = document.getElementsByClassName("Navdot");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            Array.from(slides).forEach(item => (item.style.display = "none"));
+            Array.from(dots).forEach(
+                item => (item.className = item.className.replace(" selected", ""))
+            );
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " selected";
+        }
+    </script>
+</body>
+
 </html>
