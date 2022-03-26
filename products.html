@@ -23,6 +23,7 @@
 		<link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
 
 		<!-- Theme CSS -->
+        <link rel="stylesheet" href="css/products.css">
         <link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/mobile.css">
@@ -74,10 +75,9 @@
                 <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
                     <h2>Products</h2>
                     <div class="devider"></div>
-                    <p class="subtitle" ><b>What we are known for</b></p>
                 </div>
-           
-        
+                <!-- Container for the image gallery -->
+
         <img src="img\product-bg.jpg" class="product-img" width="1500" height="200">
         <br>
         <br>
@@ -185,6 +185,37 @@
             </div>
 
         </footer>
-        
+        <script type="text/javascript">
+            let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+        </script>
     </body>
 </html>

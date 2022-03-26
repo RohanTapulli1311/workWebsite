@@ -178,23 +178,27 @@ section {
 	transition: all 0.2s ease-in-out;
 }
 .navbar-default .navbar-brand {
-	background-image: url(../img/logo_web.jpeg);
+	background-image: url(../img/main_logo.png);
 	background-size: contain;
+	width:200px;
 	
 }
 .navbar-shrink .navbar-brand {
-	background-image: url(../img/logo_web.jpeg);
+	background-image: url(../img/main_logo.png);
 	background-size: contain;
+	width:200px;
 	
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo_web.jpeg);
+	background-image: url(../img/main_logo.png);
 	background-size: contain;
+	width:200px;
 	
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo_web.jpeg);
+	background-image: url(../img/main_logo.png);
 	background-size: contain;
+	width:200px;
 	
 }
 
